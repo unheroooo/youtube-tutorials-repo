@@ -1,100 +1,100 @@
 # 🚀 Nike Limited Edition Sneakers Showcase
 
-现代化耐克限量版球鞋展示网页，采用WebGL变形效果和前沿视觉设计。
+A modern showcase web page for Nike limited-edition sneakers featuring WebGL deformation effects and cutting-edge visual design.
 
-## ✨ 项目特色
+## ✨ Project Highlights
 
-### 🎨 视觉设计
-- **现代耐克风格**：采用品牌色彩体系（黑/橙/白）
-- **响应式设计**：完美适配各种设备尺寸
-- **高端质感**：专业的视觉层次和排版
+### 🎨 Visual Design
+- Modern Nike style using brand color system (black/orange/white)
+- Responsive design for all device sizes
+- Premium look with professional visual hierarchy and typography
 
-### ⚡ 技术亮点
-- **WebGL变形效果**：6种独特的视觉变形动画
-- **流畅动画**：渐进式加载和悬停交互
-- **性能优化**：高效的渲染和动画系统
+### ⚡ Technical Highlights
+- WebGL deformation effects: six unique visual deformation animations
+- Smooth animations with progressive loading and hover interactions
+- Performance optimizations for efficient rendering and animation
 
-### 🎯 用户体验
-- **沉浸式浏览**：全屏视觉体验
-- **智能交互**：鼠标悬停反馈效果
-- **内容优先**：优化布局提升信息展示
+### 🎯 User Experience
+- Immersive full-screen browsing experience
+- Smart interactions with hover feedback
+- Content-first layout optimized for clarity
 
-## 🚀 快速开始
+## 🚀 Getting Started
 
-### 安装依赖
+### Install Dependencies
 ```bash
 npm install
-# 或者
+# or
 yarn install
 ```
 
-### 开发模式
+### Development Mode
 ```bash
 npm run develop
-# 或者
+# or
 yarn develop
 ```
 
-访问 http://localhost:8000 查看项目
+Visit `http://localhost:8000` to view the project.
 
-### 构建生产版本
+### Build for Production
 ```bash
 npm run build
-# 或者
+# or
 yarn build
 ```
 
-## 📁 项目结构
+## 📁 Project Structure
 
 ```
 src/
-├── 1.curtain-slider/          # WebGL变形效果组件
-│   ├── Canvas/                # WebGL画布组件
-│   ├── Plane/                 # 平面变形组件
-│   ├── CurtainSlider.jsx      # 主滑块组件
-│   ├── dumbData.js           # 球鞋数据
-│   └── style.scss            # 组件样式
-├── pages/                     # 页面组件
-│   ├── index.jsx             # 主页
-│   └── test.js               # 测试页面
-└── styles/                   # 全局样式
-    ├── home.scss             # 主页样式
-    └── reset.css             # 重置样式
+├── 1.curtain-slider/          # WebGL deformation slider
+│   ├── Canvas/                # WebGL canvas component
+│   ├── Plane/                 # Plane deformation component
+│   ├── CurtainSlider.jsx      # Main slider component
+│   ├── dumbData.js            # Sneakers data
+│   └── style.scss             # Component styles
+├── pages/                     # Page components
+│   ├── index.jsx              # Home page
+│   └── test.js                # Test page
+└── styles/                    # Global styles
+    ├── home.scss              # Home styles
+    └── reset.css              # CSS reset
 ```
 
-## 🎨 WebGL效果说明
+## 🎨 WebGL Effects
 
-每款球鞋都有独特的WebGL变形参数：
+Each sneaker has unique WebGL deformation parameters:
 
-1. **Nike Free Flyknit** - 流畅波动效果
-2. **Jordan Air 11** - 强烈变形效果
-3. **Nike Pegasus Turbo** - 轻盈速度感
-4. **Air Jordan 1 Retro** - 经典稳重感
-5. **Nike Air Force 1 Shadow** - 夸张视觉冲击
-6. **Nike Concept X** - 未来科技风格
+1. Nike Free Flyknit — smooth wave-like motion
+2. Jordan Air 11 — strong deformation effect
+3. Nike Pegasus Turbo — light and speedy feel
+4. Air Jordan 1 Retro — classic and stable expression
+5. Nike Air Force 1 Shadow — bold visual impact
+6. Nike Concept X — futuristic tech style
 
-## 🛠️ 技术栈
+## 🛠️ Tech Stack
 
-- **前端框架**：React + Gatsby
-- **WebGL库**：CurtainsJS
-- **样式处理**：Sass/SCSS
-- **构建工具**：Webpack
+- Front-end Framework: React + Gatsby
+- WebGL Library: CurtainsJS
+- Styling: Sass/SCSS
+- Build Tool: Webpack
 
-## 📱 浏览器支持
+## 📱 Browser Support
 
 - Chrome 60+
 - Firefox 55+
 - Safari 12+
 - Edge 79+
 
-## 📝 许可证
+## 📝 License
 
-MIT License - 详见 [LICENSE](LICENSE) 文件
+MIT License — see `LICENSE` file for details.
 
-## 🤝 贡献
+## 🤝 Contributing
 
-欢迎提交Issue和Pull Request来改进项目！
+Contributions are welcome! Please open issues and pull requests to improve this project.
 
-## 📧 联系
+## 📧 Contact
 
-如有问题或建议，请联系：jasonli.ty@gmail.com
+For questions or suggestions, contact: `jasonli.ty@gmail.com`
