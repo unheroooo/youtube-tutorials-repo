@@ -1,0 +1,181 @@
+// 现代耐克风格plane容器
+.plane-container {
+  margin: var(--plane-gap) auto; // 使用CSS变量控制间距
+  display: grid;
+  width: 90vw;
+  max-width: 1400px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: slideInUp 1s ease-out forwards;
+  
+  // 为每个容器添加不同的动画延迟
+  &:nth-child(1) { animation-delay: 0.2s; }
+  &:nth-child(2) { animation-delay: 0.4s; }
+  &:nth-child(3) { animation-delay: 0.6s; }
+  &:nth-child(4) { animation-delay: 0.8s; }
+  &:nth-child(5) { animation-delay: 1.0s; }
+  &:nth-child(6) { animation-delay: 1.2s; }
+
+  &.direct {
+    grid-template-columns: 1fr 2fr;
+    
+    .plane-details {
+      order: 1;
+      text-align: right;
+      padding-right: 60px;
+    }
+    .plane-image {
+      order: 2;
+    }
+  }
+  
+  &.reverse {
+    grid-template-columns: 2fr 1fr;
+    
+    .plane-details {
+      order: 2;
+      text-align: left;
+      padding-left: 60px;
+    }
+    .plane-image {
+      order: 1;
+    }
+  }
+  
+    .plane-image {
+    height: 70vh; // 减少高度
+    min-height: 500px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    &:hover {
+      transform: scale(1.02);
+      box-shadow: 0 35px 100px rgba(255, 105, 0, 0.3);
+    }
+
+    img {
+      display: none;
+    }
+  }
+}
+
+// 向上滑入动画
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// 现代化的plane详情
+.plane-details {
+  width: 300px; // 增加宽度
+  align-self: center;
+  justify-self: center;
+  opacity: 0;
+  animation: fadeInDetails 1s ease-out forwards;
+  
+  h6 {
+    font-size: clamp(24px, 3vw, 36px); // 响应式字体
+    font-weight: 900; // 更粗的字体
+    color: var(--nike-white);
+    margin-bottom: 20px;
+    letter-spacing: -1px;
+    line-height: 1.1;
+    text-transform: uppercase; // 大写字母
+    
+    // 添加渐变文字效果
+    background: linear-gradient(45deg, var(--nike-white), var(--nike-orange));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--nike-gray);
+    margin-bottom: 30px;
+    font-weight: 400;
+  }
+
+  .vertical-line {
+    height: 3px; // 更粗的线
+    width: 80px; // 更长的线
+    background: linear-gradient(90deg, var(--nike-orange), transparent);
+    margin: 30px 0;
+    border-radius: 2px;
+    opacity: 0;
+    animation: lineGrow 0.8s ease-out 0.5s forwards;
+  }
+  
+  // 添加型号标签
+  .model-tag {
+    display: inline-block;
+    padding: 8px 16px;
+    background: rgba(255, 105, 0, 0.1);
+    border: 1px solid var(--nike-orange);
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--nike-orange);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    opacity: 0;
+    animation: tagFadeIn 0.6s ease-out 0.8s forwards;
+  }
+}
+
+// 详情动画
+@keyframes fadeInDetails {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes lineGrow {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 80px;
+    opacity: 1;
+  }
+}
+
+@keyframes tagFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// WebGL Canvas样式
+.Plane {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Plane img {
+  display: none;
+}

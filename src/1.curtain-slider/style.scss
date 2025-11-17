@@ -1,0 +1,113 @@
+// 现代耐克风格变量
+:root {
+  --nike-black: #000000;
+  --nike-white: #ffffff;
+  --nike-orange: #ff6900;
+  --nike-gray: #757575;
+  --nike-light-gray: #f5f5f5;
+  --banner-height: 300px; // 降低banner高度
+  --plane-gap: 120px; // 增加plane之间的间距
+}
+
+body {
+  background: linear-gradient(135deg, var(--nike-black) 0%, #1a1a1a 100%);
+  color: var(--nike-white);
+  position: relative;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.page-content {
+  margin: 200px 0; // 减少margin
+}
+
+#page-content {
+  padding: 150px 0; // 减少padding，让内容更紧凑
+}
+
+.text-slider {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 10;
+
+  span {
+    position: fixed;
+    font-size: clamp(60px, 8vw, 120px); // 响应式字体大小
+    font-weight: 900; // 更粗的字体
+    top: 50%;
+    transform: translate(calc(50vw - 50%), -50%);
+    color: var(--nike-white);
+    text-shadow: 0 0 30px rgba(255, 105, 0, 0.5);
+    letter-spacing: -2px; // 更紧凑的字间距
+    opacity: 0;
+    animation: fadeInText 2s ease-out 0.5s forwards;
+  }
+}
+
+// 文字淡入动画
+@keyframes fadeInText {
+  from {
+    opacity: 0;
+    transform: translate(calc(50vw - 50%), -40%);
+  }
+  to {
+    opacity: 1;
+    transform: translate(calc(50vw - 50%), -50%);
+  }
+}
+
+.banner {
+  position: absolute;
+  z-index: -1;
+  left: 50%;
+  background: linear-gradient(45deg, var(--nike-orange), #ff8533);
+  width: 85vw; // 稍微增加宽度
+  height: var(--banner-height);
+  border-radius: 20px; // 现代圆角
+  box-shadow: 0 20px 60px rgba(255, 105, 0, 0.3);
+  opacity: 0;
+  animation: bannerFadeIn 1.5s ease-out forwards;
+
+  &.top {
+    top: 0;
+    transform: translate(-50%, 0) scale(0.9);
+    animation: bannerSlideInTop 1.2s ease-out forwards;
+  }
+
+  &.bottom {
+    bottom: 0;
+    transform: translate(-50%, 0) scale(0.9);
+    animation: bannerSlideInBottom 1.2s ease-out 0.3s forwards;
+  }
+}
+
+// Banner动画
+@keyframes bannerFadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes bannerSlideInTop {
+  from {
+    transform: translate(-50%, -100%) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes bannerSlideInBottom {
+  from {
+    transform: translate(-50%, 100%) scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0) scale(1);
+    opacity: 1;
+  }
+}
