@@ -1,9 +1,17 @@
 import React from "react";
 import { Curtains } from "curtainsjs";
 
+// Check if window is available to avoid SSR issues
+const getDevicePixelRatio = () => {
+  if (typeof window !== "undefined") {
+    return Math.min(1.5, window.devicePixelRatio);
+  }
+  return 1; // Default value for SSR
+};
+
 const initialState = {
   curtains: new Curtains({
-    pixelRatio: Math.min(1.5, window.devicePixelRatio),
+    pixelRatio: getDevicePixelRatio(),
   }),
   container: null,
   scrollEffect: 0,
